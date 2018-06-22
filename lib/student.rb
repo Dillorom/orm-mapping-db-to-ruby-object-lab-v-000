@@ -62,6 +62,6 @@ class Student
     # WHERE grade <= 11
     # SQL
     # DB[:conn].execute(sql)
-    self.all.detect {|student| student.grade <= "11"}
+    self.all.detect {|student| student.grade <== "11"}
   end
 end
