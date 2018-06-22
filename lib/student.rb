@@ -57,11 +57,10 @@ class Student
   end
 
   def self.students_below_12th_grade
-    # sql = <<-SQL
-    # SELECT * FROM students
-    # WHERE grade <= 11
-    # SQL
-    # DB[:conn].execute(sql)
     self.all.select {|student| student.grade <= "11"}
+  end
+
+  def self.first_X_students_in_grade_10
+    self.all.select {|student| student.grade == "10"}
   end
 end
