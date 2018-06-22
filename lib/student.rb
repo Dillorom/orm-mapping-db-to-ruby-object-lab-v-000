@@ -19,7 +19,7 @@ class Student
   end
 
   def self.find_by_name(name)
-    slq = <<-SQL
+    sql = <<-SQL
     SELECT * name FROM students
     WHERE name = name
     SQL
