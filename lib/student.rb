@@ -64,7 +64,7 @@ class Student
     self.all.detect do |student|
       student.name == "X"
       student.grade == "10"
-      
+
     end
   end
 end
