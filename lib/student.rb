@@ -24,7 +24,7 @@ class Student
     WHERE name = name
     SQL
     DB[:conn].execute(sql).find do |n|
-      n= name
+      n = name
     end
     # find the student in the database given a name
     # return a new instance of the Student class
