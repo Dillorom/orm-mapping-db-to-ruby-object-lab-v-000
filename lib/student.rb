@@ -61,6 +61,8 @@ class Student
   end
 
   def self.first_X_students_in_grade_10
-    self.all.detect {|student| student.grade == "10"}
+    self.all.detect do |student| 
+      student.grade == "10"
+      student.name == "X"}
   end
 end
