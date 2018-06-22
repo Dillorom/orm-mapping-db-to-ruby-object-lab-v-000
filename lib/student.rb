@@ -19,11 +19,7 @@ class Student
   end
 
   def self.find_by_name(name)
-    sql = <<-SQL
-    SELECT * name FROM students
-    WHERE name = row[1]
-    SQL
-    DB[:conn].execute(sql)
+    self.all.detect {|a| a.name == name}
     # find the student in the database given a name
     # return a new instance of the Student class
   end
